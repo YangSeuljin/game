@@ -47,6 +47,7 @@ button {
   font-size: 32px;
   margin-top: 8px;
   border-radius: 20px;
+  visibility: hidden;
 }
 .game__score {
   text-align: center;
@@ -58,6 +59,7 @@ button {
   background-color: darksalmon;
   color: white;
   margin-top: 8px;
+  visibility: hidden;
 }
 
 .game__field {
