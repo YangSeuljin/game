@@ -107,6 +107,7 @@ button {
 .carrot,
 .bug {
   transition: transform 100ms ease-in;
+  cursor: pointer;
 }
 .carrot:hover,
 .bug:hover {
