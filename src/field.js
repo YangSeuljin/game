@@ -1,8 +1,13 @@
 import * as sound from "./sound.js";
 import { Started } from "./game.js";
-"use strict";
+("use strict");
 
 const CARROT_SIZE = 80;
+
+export const ItemType = Object.freeze({
+  carrot: "carrot",
+  bug: "bug",
+});
 
 export default class Field {
   constructor(carrotCount, bugCount) {
@@ -43,17 +48,17 @@ export default class Field {
   }
 
   onClick(event) {
-    if(Started){
-    const target = event.target;
-    if (target.matches(".carrot")) {
-      target.remove();
-      sound.playCarrot();
-      this.onItemClick && this.onItemClick("carrot");
-    } else if (target.matches(".bug")) {
-      this.onItemClick && this.onItemClick("bug");
+    if (Started) {
+      const target = event.target;
+      if (target.matches(".carrot")) {
+        target.remove();
+        sound.playCarrot();
+        this.onItemClick && this.onItemClick("carrot");
+      } else if (target.matches(".bug")) {
+        this.onItemClick && this.onItemClick("bug");
+      }
     }
   }
-}
 }
 
 function randomNumber(min, max) {
