@@ -22,8 +22,8 @@ export class Field {
 
   init() {
     this.field.innerHTML = "";
-    this._addItem("carrot", this.carrotCount, "/img/carrot.png");
-    this._addItem("bug", this.bugCount, "/img/bug.png");
+    this._addItem("carrot", this.carrotCount, "./img/carrot.png");
+    this._addItem("bug", this.bugCount, "./img/bug.png");
   }
 
   setClickListener(onItemClick) {
