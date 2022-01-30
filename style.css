@@ -11,7 +11,7 @@ button {
   cursor: pointer;
 }
 .game {
-  background: url("/img/background.png") center/cover;
+  background: url("./img/background.png") center/cover;
   width: 800px;
   height: 500px;
   display: flex;
